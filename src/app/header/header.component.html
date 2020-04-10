@@ -1,0 +1,19 @@
+<header class="header-container">
+    <a href="/home"><img src="../../assets/logo.svg" class="logo"></a>
+
+    <nav>
+        <div class="hamburger-menu-container" (click)="toggleHamburgerMenu();" [ngClass]="{change: menuOpen}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="nav-items" [ngClass]="{'close-menu': !menuOpen}">
+            <ul>
+                <li><a href="#" class="nav-links">Blog</a></li>
+                <li><a href="#" class="nav-links">Projects</a></li>
+                <li><a href="#" class="nav-links">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>

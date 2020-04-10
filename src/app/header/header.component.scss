@@ -1,0 +1,117 @@
+.header-container {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #f8f8f8;
+  border: 1px solid #cacaca;
+  height: 50px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 145px;
+  margin-left: 20px;
+  margin-top: 14px;
+  max-width: 150px;
+}
+
+nav {
+  min-width: 50%;
+}
+
+.nav-items ul {
+  display: block;
+  list-style-type: none;
+  margin-top: 50px;
+  background: #f8f8f8;
+  border: 1px solid #cacaca;
+  padding-left: 0;
+
+  li {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    a {
+      color: #006699;
+      text-decoration: none;
+    }
+  }
+  li:last-child {
+    padding-bottom: 20px;
+  }
+}
+
+.close-menu {
+  display: none;
+}
+
+.hamburger-menu-container {
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -9px);
+  transform: rotate(45deg) translate(-9px, -9px);
+}
+
+/* Medium devices (tablets, 768px and up) The navbar menu disappears at this breakpoint */
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: flex-start;
+  }
+
+  nav {
+    min-width: inherit;
+  }
+
+  .hamburger-menu-container {
+    display: none;
+  }
+
+  .nav-items {
+    display: inherit;
+  }
+  
+  .nav-items ul {
+    margin-top: 0;
+    border: 0;
+    background-color: inherit;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+}
