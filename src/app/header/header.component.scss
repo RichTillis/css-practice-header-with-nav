@@ -38,11 +38,13 @@ nav {
     padding-top: 20px;
     text-align: center;
     font-size: 22px;
+
     a {
       color: #006699;
       text-decoration: none;
     }
   }
+
   li:last-child {
     padding-bottom: 20px;
   }
@@ -99,19 +101,26 @@ nav {
 
   .nav-items {
     display: inherit;
+    margin-top: 12px;
   }
-  
+
   .nav-items ul {
+    display: flex;
+    justify-content: space-evenly;
     margin-top: 0;
     border: 0;
     background-color: inherit;
+
+    li {
+      padding: inherit;
+      padding-left: 25px;
+    }
   }
+
 }
 
 /* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-}
+@media screen and (min-width: 992px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-}
+@media screen and (min-width: 1200px) {}
