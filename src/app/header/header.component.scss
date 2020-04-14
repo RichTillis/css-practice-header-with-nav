@@ -1,5 +1,7 @@
 .header-container {
-  width: 100%;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -10,10 +12,10 @@
   margin: 0 auto;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
+// header {
+// display: flex;
+// justify-content: space-between;
+// }
 
 .logo {
   width: 145px;
@@ -23,15 +25,15 @@ header {
 }
 
 nav {
-  min-width: 50%;
+  flex: 2
 }
 
-.nav-items ul {
+.site-nav ul {
   display: block;
   list-style-type: none;
   margin-top: 50px;
   background: #f8f8f8;
-  border: 1px solid #cacaca;
+  border-left: 1px solid #cacaca;
   padding-left: 0;
 
   li {
@@ -47,6 +49,30 @@ nav {
 
   li:last-child {
     padding-bottom: 20px;
+  }
+}
+
+.social-nav ul {
+  margin-top: -20px;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding-left: 0;
+  background: #f8f8f8;
+  border-left: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+
+  li {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 22px;
+    padding-bottom: 20px;
+
+    a {
+      color: #006699;
+      text-decoration: none;
+    }
   }
 }
 
@@ -87,26 +113,19 @@ nav {
 
 /* Medium devices (tablets, 768px and up) The navbar menu disappears at this breakpoint */
 @media screen and (min-width: 768px) {
-  header {
-    justify-content: flex-start;
-  }
-
-  nav {
-    min-width: inherit;
-  }
 
   .hamburger-menu-container {
     display: none;
   }
 
   .nav-items {
-    display: inherit;
+    display: flex;
+    justify-content: space-between;
     margin-top: 12px;
   }
 
-  .nav-items ul {
+  .site-nav ul {
     display: flex;
-    justify-content: space-evenly;
     margin-top: 0;
     border: 0;
     background-color: inherit;
@@ -116,6 +135,32 @@ nav {
       padding-left: 25px;
     }
   }
+
+  .social-nav ul {
+    display: flex;
+    margin-top: 0;
+    border: 0;
+    background-color: inherit;
+
+    li {
+      padding: inherit;
+      padding-left: 25px;
+    }
+    li:last-child {
+      padding-right: 30px;
+    }
+  }
+
+  // ul{
+  //   display: flex;
+  //   margin-top: 0;
+  //   border: 0;
+  //   background-color: inherit;
+  //   li {
+  //     padding: inherit;
+  //     padding-left: 25px;
+  //   }
+  // }
 
 }
 
